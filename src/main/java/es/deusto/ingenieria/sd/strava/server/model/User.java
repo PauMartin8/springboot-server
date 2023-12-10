@@ -18,22 +18,22 @@ public class User {
 	
 	@Id
 	@Column(unique = true)
-	private String mail;
+	private String email;
 
 	public User() {
 	}
 
 	public User(String contrasena, String email) {
 		this.contr = contrasena;
-		this.mail = email;
+		this.email = email;
 	}
 
 	public String getEmail() {
-		return mail;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		this.mail = email;
+		this.email = email;
 	}
 	
 	public String getContrasena() {
@@ -46,12 +46,12 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [email=" + mail + ", " + contr + "]";
+		return "User [email=" + email + ", " + contr + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(mail);
+		return Objects.hash(email);
 	}
 
 	@Override
@@ -63,6 +63,6 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(mail, other.mail);
+		return Objects.equals(email, other.email);
 	}
 }
